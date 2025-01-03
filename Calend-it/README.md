@@ -1,30 +1,58 @@
 # Calendar Application for Communication Tracking
 
-This Calendar Application helps companies track and manage communication with other organizations. It allows administrators to configure communication parameters, and users can visualize, manage, and log interactions efficiently. The application is built with React and deployed on Netlify.
+A React-based application designed to streamline and manage communications with companies. This tool helps maintain consistent follow-ups, track interaction history, and analyze engagement patterns through a user-friendly interface and visual analytics.
 
 ---
 
 ## Features
 
 ### Admin Module
-- **Company Management**: Add, edit, and delete companies with details like name, location, LinkedIn profile, emails, phone numbers, comments, and communication periodicity.
-- **Communication Method Management**: Define available communication methods with attributes like name, description, sequence, and mandatory flag.
+- **Company Management**: Add, edit, and delete companies with details such as name, location, LinkedIn profile, email addresses, phone numbers, and additional comments.
+  Set communication periodicity for scheduled follow-ups.
+- **Communication Method Management**: Define and customize communication methods with attributes like name, description, sequence, and mandatory status.
+- **Default methods include**:
+    - LinkedIn Post
+    - LinkedIn Message
+    - Email
+    - Phone Call
+    - Other
 
 ### User Module
 - **Dashboard**:
-  - View a grid of companies with columns for company name, last five communications, and next scheduled communication.
-  - Color-coded highlights for overdue (red) and due (yellow) communications.
-  - Hover tooltips to display notes for completed communications.
-- **Communication Action**: Log new communications, select communication type, date, and add notes.
-- **Notifications**: Display overdue and today’s communications in separate grids with a badge showing counts.
-- **Calendar View**: Visualize past and upcoming communications interactively.
+  - View companies, last five communications, and the next scheduled communication.
+  - Color-coded highlights:
+      - Red: Overdue communications
+      - Yellow: Tasks due today
+  - Interactive hover tooltips for additional communication details.
 
-### Reporting and Analytics Module
-- Communication frequency report.
-- Engagement effectiveness dashboard.
-- Overdue communication trends.
-- Downloadable reports in PDF or CSV.
-- Real-time activity log.
+- **Notifications**:
+  - Separate grids for overdue and today’s communications.
+  - Notification icon with badge counts.
+- **Calendar View**:
+  - Visualize past and upcoming communications.
+- **Log Communication**:
+  - Modal to record communication type, date, and additional notes.
+
+### Analytics Module
+- Insights and Visualizations:
+  
+  - **Communication Frequency**: Bar and pie charts displaying the usage of various communication methods.
+  - **Engagement Metrics**: Analyze response rates and effectiveness of communication methods.
+  - **Overdue Trends**: Trendlines highlighting overdue communications over time.
+- Filters:
+  - Filter data by company, communication type, and date range.
+- Export Options:
+  - Download insights as CSV for offline sharing.
+
+-
+
+### Technologies Used
+
+  - **Frontend**: React.js
+  - **State Management**: Local storage and session storage
+  - **Styling**: TailwindCSS
+  - **Charts**: Recharts for dynamic and interactive data visualizations
+  - **Deployment**: Vercel
 
 ---
 
@@ -57,15 +85,15 @@ This Calendar Application helps companies track and manage communication with ot
 
 ## Deployment Instructions
 
-This application is deployed on Netlify. To deploy your own version:
+This application is deployed on Vercel. To deploy your own version:
 
-1. Create a Netlify account and link it to your GitHub repository.
+1. Create a Vercel account and link it to your GitHub repository.
 2. Configure the build settings:
    - **Build Command**: `npm run build`
    - **Publish Directory**: `dist`
 3. Deploy the application.
 
-The application will be available at your Netlify-provided URL.
+The application will be available at your Vercel-provided URL.
 
 ---
 
@@ -83,10 +111,40 @@ The application will be available at your Netlify-provided URL.
 
 ---
 
+### User Testing
+  - User testing has been successfully conducted to validate:
+
+    - **Usability**: Ensured the application is intuitive and easy to navigate for both admins and users.
+    - **Performance**: Confirmed smooth operation with minimal delays during data handling and rendering.
+    - **Accuracy**: Verified proper handling of overdue, due, and completed communications.
+      
+  - Feedback from testing was positive, and the application is now ready for broader usage.
+
+---
+
+### Usage
+- **Admin Access**
+  - Configure companies and communication methods through the admin module.
+- **User Access**
+  - Track overdue, due, and completed communications via the dashboard.
+  - Log new communications using the interactive modal.
+  - Use the calendar to manage scheduled interactions.
+-**Analytics**
+  - Navigate to the "Analytics" section.
+  - Select filters to customize the charts.
+  - Export charts CSV for reporting.
+
 ## Known Limitations
 
 - **Customization**: Limited customization of communication methods.
 - **Offline Mode**: Application requires an active internet connection.
+
+---
+
+## Known Issues
+
+- Limited scalability for large datasets in local/session storage.
+- Recharts visualizations may not fully render on extremely small screens.
 
 ---
 

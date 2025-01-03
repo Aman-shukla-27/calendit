@@ -83,6 +83,12 @@ A React-based application designed to streamline and manage communications with 
 
 ---
 
+## Live Demo:
+
+  - **Access the deployed application**: https://calendit.vercel.app/
+
+---
+
 ## Deployment Instructions
 
 This application is deployed on Vercel. To deploy your own version:
